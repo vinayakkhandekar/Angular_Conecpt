@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form [formGroup]="myForm"  (ngSubmit)="showReactivedata()">
+                <label for="name"  class="form-control">Name</label>
+                <input type="text" class="form-control" id="name" formControlName="name" placeholder="Enter Name">
+                <small *ngIf="!myForm.get('name').valid && myForm.get('name').touched">
+                    <small *ngIf="myForm.get('name').errors['required']">Provide valid name</small>
+                </small>
+
+                <label for="email"  class="form-control">Email</label>
+                <input type="email" class="form-control" id="email" formControlName="email" placeholder="Enter Email">
+
+                <label for="password"  class="form-control">Password</label>
+                <input type="password" class="form-control" id="password" formControlName="password" placeholder="Enter Password">
+                <div formArrayName="arr">
+                 <ng-container *ngFor="let element of myForm.get('arr').controls,index as i">
+<input type="text" id="skill" formControlName="{{i}}" placeholder="ENter skill" class="form-control">
+                 </ng-container>
+                </div>
+                <button class="btn" (click)="addSkill()">ADD</button>
+                <button class="btn btn-warning mt-2">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

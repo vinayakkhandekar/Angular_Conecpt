@@ -1,0 +1,14 @@
+<table class="table table-striped col-md-6 justify-content-center">
+    <thead class="bg-dark text-white">
+        <th>userId</th>
+        <th>id</th>
+        <th>title</th>
+    </thead>
+    <tbody *ngFor="let element of albums" >
+        <tr>
+            <td>{{element.userId}}</td>
+            <td>{{element.id}}</td>
+            <td>{{element.title}}</td>
+        </tr>
+    </tbody>
+</table>

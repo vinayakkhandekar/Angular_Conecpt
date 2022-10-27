@@ -1,0 +1,17 @@
+<div class="container rounded text-center">
+<h1>Data Binding</h1>
+<div class="bg-warning rounded text-white">
+<h2>One Way Data Binding</h2>
+<h4>
+    Event Binding
+</h4>
+<button (click)="data()" class="btn btn-info text-white">Click</button>
+<h5>String interpotion = {{data1}}</h5>
+<h5>Property binding = <img [src]="data3" height="150px" width="150px" class="m-2"></h5>
+</div>
+<div class="rounded bg-primary text-center text-white">
+    <h2>Two way data binding</h2>
+    <input type="text" id="name" name="name" class="form-control mb-2" placeholder="Enter name" [(ngModel)]="h">
+    <h2>{{h}}</h2>
+</div>
+</div>
