@@ -17,7 +17,7 @@ const routes: Routes = [
 {path:"data-binding",component:DataBindingComponent},
 {path:"pipes",loadChildren:"./pipesmodule/pipesmodule.module#PipesmoduleModule"}
 
-];
+]; 
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
