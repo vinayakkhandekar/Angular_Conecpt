@@ -6,7 +6,7 @@ import { Child4Component } from './child4/child4.component';
 import { RouterModule, Routes } from '@angular/router';
 
 const rt:Routes=[
-  {path:"",component:Main2Component ,children:[
+  {path:"",component:Main2Component,children:[
     {path:"child3" ,component:Child3Component},
     {path:"child4" ,component:Child4Component}
   ]}
@@ -14,10 +14,10 @@ const rt:Routes=[
 
 @NgModule({
   declarations: [Main2Component, Child3Component, Child4Component],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(rt)
-  ]
+imports:[
+  CommonModule,
+  RouterModule.forChild(rt)
+]
 })
 export class LazyLoadModule {
   /**
